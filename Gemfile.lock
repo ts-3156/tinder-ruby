@@ -1,3 +1,9 @@
+PATH
+  remote: .
+  specs:
+    tinder-ruby (0.1.0)
+      dotenv (~> 2.2.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -7,13 +13,16 @@ GEM
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    rake (10.5.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  dotenv
-  pry
+  bundler (~> 1.16)
+  pry (~> 0.11.3)
+  rake (~> 10.0)
+  tinder-ruby!
 
 BUNDLED WITH
    1.16.0
