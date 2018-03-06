@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tinder-ruby (0.1.0)
+    tinder-ruby (0.1.1)
       dotenv (~> 2.2.1)
 
 GEM

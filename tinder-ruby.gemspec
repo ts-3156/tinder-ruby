@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "tinder-ruby"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["ts-3156"]
   spec.email         = ["ts_3156@yahoo.co.jp"]
 
