@@ -25,6 +25,10 @@ module Tinder
         https.request(req)
       end
 
+      def get(endpoint, payload, headers = {})
+        request(:get, endpoint, payload, headers)
+      end
+
       def post(endpoint, payload, headers = {})
         request(:post, endpoint, payload, headers)
       end
