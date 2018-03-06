@@ -1,8 +1,6 @@
-# Tinder::Ruby
+# tinder-ruby
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/tinder/ruby`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A Ruby interface to the Tinder API
 
 ## Installation
 
@@ -22,17 +20,45 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Specify `FB_TOKEN`
 
-## Development
+```text
+# Create [project root]/.env
+FB_TOKEN = AAABBBCCCDDDEEEFFF...
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Initialize a client
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```ruby
+require 'tinder'
 
-## Contributing
+token = ENV['FB_TOKEN']
+client = Tinder::Client.new(token)
+```
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/tinder-ruby.
+Get your own profile data
+
+```ruby
+client.profile
+```
+
+Get match recommendations
+
+```ruby
+client.recs
+```
+
+Change your search preferences
+
+```ruby
+client.change_filter(
+  age_filter_min: 18,
+  age_filter_max: 30,
+  gender: 0,
+  gender_filter: 1,
+  distance_filter: 50
+)
+```
 
 ## License
 
